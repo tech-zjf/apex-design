@@ -191,7 +191,7 @@ const AtInput = (props: AtInputProps) => {
     return (
         <div style={{ height, position: 'relative' }}>
             {/* 编辑器 */}
-            <div id="atInput" ref={atRef} className={'editorDiv'} contentEditable onInput={editorChange} onClick={editorClick} />
+            <div id="atInput" ref={atRef} className={'editor'} contentEditable onInput={editorChange} onClick={editorClick} />
             {/* 选择用户框 */}
             <SelectUser options={options} visible={visible} cursorPosition={cursorPosition} onSelect={onSelect} />
         </div>

@@ -16,7 +16,6 @@ react, components, ui
 ## use
 
 ```
-
  import 'apex-design/style';
  import { AtInput } from 'apex-design';
 ```
