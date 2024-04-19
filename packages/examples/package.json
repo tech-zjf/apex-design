@@ -12,7 +12,8 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "apex-design": "workspace:^"
+    "apex-design": "workspace:^",
+    "tools": "workspace:^"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

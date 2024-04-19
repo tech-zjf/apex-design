@@ -1,0 +1,52 @@
+.editorDiv {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 16px;
+    white-space: break-spaces;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    outline: none;
+    resize: none;
+    .atSpan {
+        color: blue;
+    }
+}
+
+.selectWrap {
+    z-index: 666;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: auto;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: flex;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 7px 5px;
+            border-bottom: 1px solid #d9d9d9;
+            cursor: pointer;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+            span {
+                flex: 1;
+                margin-left: 20px;
+                overflow: hidden;
+            }
+        }
+    }
+}
