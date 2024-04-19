@@ -6,8 +6,17 @@ react, components, ui
 
 ...
 
-## use
+## install
+
 ```
  npm install apex-design
+
 ```
-  
+
+## use
+
+```
+
+ import 'apex-design/style';
+ import { AtInput } from 'apex-design';
+```
