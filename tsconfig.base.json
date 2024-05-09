@@ -1,0 +1,13 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "paths": {
+      "@tools": [
+        "./packages/tools/src/index.ts"
+      ],
+    }
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

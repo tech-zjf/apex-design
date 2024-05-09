@@ -1,6 +1,6 @@
 {
-  "name": "tools",
-  "version": "1.0.0",
+  "name": "zjf-tools",
+  "version": "1.0.1",
   "description": "",
   "main": "src/index.js",
   "module": "src/index.ts",

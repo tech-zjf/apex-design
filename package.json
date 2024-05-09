@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:examples": "pnpm --filter examples dev",
-    "dev:admin": "pnpm --filter zjf-admin dev",
     "build:ui": "pnpm --filter apex-design build",
     "build:ui:watch": "pnpm --filter apex-design build:watch",
     "link:ui": "pnpm --filter apex-design run link",
