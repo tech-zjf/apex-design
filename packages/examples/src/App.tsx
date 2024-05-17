@@ -1,42 +1,68 @@
-import 'apex-design/style';
-import { AtInput } from 'apex-design';
+import React from 'react';
+import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { Outlet, useNavigate } from 'react-router-dom';
 
-function App() {
+const { Header, Content, Sider } = Layout;
+
+const menu: MenuProps['items'] = [
+    {
+        key: '/',
+        icon: <></>,
+        label: '首页'
+    },
+    {
+        key: 'components',
+        icon: <></>,
+        label: '组件',
+        children: [
+            {
+                key: 'at-input',
+                label: '@输入框'
+            }
+        ]
+    }
+];
+
+const App: React.FC = () => {
+    const {
+        token: { colorBgContainer, borderRadiusLG }
+    } = theme.useToken();
+    const route = useNavigate();
+
     return (
-        <div style={{ padding: '0 20px' }}>
-            <label>@输入框组件：</label>
-            <AtInput
-                onRequest={async (key) => {
-                    let user = [
-                        {
-                            name: '张三',
-                            id: 1,
-                            avatar: 'https://p6-passport.byteacctimg.com/img/user-avatar/d499bec908ea4c0619c4fccd416d5e7c~100x100.awebp'
-                        },
-                        {
-                            name: '李四',
-                            id: 2,
-                            avatar: 'https://p6-passport.byteacctimg.com/img/user-avatar/d499bec908ea4c0619c4fccd416d5e7c~100x100.awebp'
-                        },
-                        {
-                            name: '王五',
-                            id: 3,
-                            avatar: 'https://p6-passport.byteacctimg.com/img/user-avatar/d499bec908ea4c0619c4fccd416d5e7c~100x100.awebp'
-                        },
-                        {
-                            name: '王二麻子',
-                            id: 4,
-                            avatar: 'https://p6-passport.byteacctimg.com/img/user-avatar/d499bec908ea4c0619c4fccd416d5e7c~100x100.awebp'
-                        }
-                    ];
-                    return user.filter((u) => u.name.includes(key || ''));
-                }}
-                onChange={(content, select) => {
-                    console.log(content, select);
-                }}
-            ></AtInput>
-        </div>
+        <Layout>
+            <Header style={{ display: 'flex', alignItems: 'center' }}>
+                <h2 className=" text-white text-2xl">技术锋</h2>
+            </Header>
+            <Layout>
+                <Sider width={200} style={{ background: colorBgContainer }}>
+                    <Menu
+                        mode="inline"
+                        style={{ height: '100%', borderRight: 0 }}
+                        items={menu}
+                        onSelect={({ key }) => {
+                            route(key);
+                        }}
+                    />
+                </Sider>
+                <Layout className="p-4">
+                    <Content
+                        style={{
+                            padding: 24,
+                            margin: 0,
+                            minHeight: 280,
+                            background: colorBgContainer,
+                            borderRadius: borderRadiusLG
+                        }}
+                    >
+                        <Outlet />
+                    </Content>
+                </Layout>
+            </Layout>
+        </Layout>
     );
-}
+};
 
 export default App;
