@@ -1,4 +1,4 @@
 const Home: React.FC = () => {
-    return <div className="">Welcome</div>;
+    return <div>Welcome</div>;
 };
 export default Home;
