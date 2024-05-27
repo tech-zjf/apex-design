@@ -1,5 +1,4 @@
 import React from 'react';
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
 import { Outlet, useNavigate } from 'react-router-dom';
@@ -46,6 +45,8 @@ const App: React.FC = () => {
                         mode="inline"
                         style={{ height: '100%', borderRight: 0 }}
                         items={menu}
+                        defaultOpenKeys={['components']}
+                        defaultSelectedKeys={['root']}
                         onSelect={({ key }) => {
                             route(key);
                         }}
