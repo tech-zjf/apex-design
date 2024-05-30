@@ -101,8 +101,8 @@ importers:
         specifier: ^5.17.2
         version: 5.17.2(react-dom@18.2.0)(react@18.2.0)
       apex-design:
-        specifier: ^1.0.0
-        version: link:../..
+        specifier: workspace:^
+        version: link:../components
       autoprefixer:
         specifier: ^10.4.19
         version: 10.4.19(postcss@8.4.38)
