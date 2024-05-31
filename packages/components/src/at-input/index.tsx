@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import SelectUser from './select-user';
 import './index.less';
-import { StringTools } from '@tools';
+import { StringTools } from '../../tools/index';
 
 let timer: NodeJS.Timeout | null = null;
 export interface Event {
